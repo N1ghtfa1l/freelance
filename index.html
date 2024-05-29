@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=06bf498c-dbe6-464b-ab5c-64e47f6caf17&lang=ru_RU"
+        type="text/javascript"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <img class="header__inner-img" src="img/header/logo.png" alt="">
+                <nav class="header__inner-nav">
+                    <a href="#" class="header-nav">Каталог</a>
+                    <a href="#" class="header-nav">О нас</a>
+                    <a href="#" class="header-nav">Подбор товара</a>
+                    <a href="#" class="header-nav">Наша команда</a>
+                    <a href="#" class="header-nav">Доставка и оплата</a>
+                    <a href="#" class="header-nav">Контакты</a>
+                    <div class="header-nav-cart">
+                        <a href="#" class="header-nav">Корзина</a>
+                        <img class="img-car" src="img/header/cart.svg" alt="">
+                        <div class="cart-counter">0</div>
+                    </div>
+                </nav>
+
+
+                <!-- MODAL MINI -->
+                <div class="modal-mini-cart">
+                    <div class="modal__mini-cart-inner">
+                        <div class="mini-cart-box">
+
+                        </div>
+                        <div class="mini-cart-bottom">
+                            <div class="mini-cart-counter">
+                                <div class="mini-cart-counter-title">Итого:</div>
+                                <div class="mini-cart-counter-price"> 0 </div>
+                            </div>
+                            <button class="mini-cart-bottom-btn">Перейти в корзину</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+                <!-- MODAL CART -->
+                <div class="modal-cart">
+                    <div class="modal__cart-inner">
+                        <div class="modal__cart-title">Оформление заказа</div>
+                        <div class="modal__cart-box">
+                            <div class="modal__cart-box__inner">
+                                <div class="modal__cart-box__inner-counter">
+                                    Товаров в заказе:
+                                    <div class="modal__cart-counter">0</div>
+                                    шт
+                                </div>
+                                <div class="modal__cart-box__inner-counter-price">
+                                    Общая сумма заказа:
+                                    <span class="total-modal">0</span>
+                                    <span>₽</span>
+                                </div>
+                                <div class="modal__cart-box-items">
+
+                                </div>
+                            </div>
+                        </div>
+                        <form action="" class="modal__cart-form">
+                            <input type="text" placeholder="Ваше имя">
+                            <input type="phone" placeholder="Номер телефона">
+                            <input type="text" placeholder="E-mail">
+                            <button class="modal-cart-btn">Оформить заказ</button>
+                        </form>
+                        <div class="modal__cart-close">X</div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+
+    <!-- intro -->
+    <div class="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <div class="intro__inner-title">Кроссовки известных брендов
+                    с доставкой по России и СНГ</div>
+                <span class="intro__inner-back">SneakMax</span>
+                <div class="intro__inner-subtitle">Мы продаем кроссовки брендов Nike, Adidas, Puma, Reebok, Converse и
+                    многие другие по низким ценам</div>
+                <butaton class="intro__inner-btn">Перейти к покупкам</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- catalog -->
+    <div class="catalog">
+        <div class="container">
+            <div class="catalog-title">Каталог</div>
+            <div class="catalog__inner-option">
+                <div class="catalog__inner-setting">
+                    <div class="catalog__inner-option__title">Подбор
+                        <p>по параметрам</p>
+                    </div>
+                    <div class="catalog__inner-option__desc">Цена, руб</div>
+                    <form id="catalog__form">
+                        <div class="catalog__inner-option__input">
+                            <div class="field field-left">
+                                <input type="number" class="input-min" value="1500">
+                            </div>
+                            <div class="field">
+                                <input type="number" class="input-max" value="40000">
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="40000" value="1850">
+                            <input type="range" class="range-max" min="0" max="40000" value="40000">
+                        </div>
+                    </form>
+                        <div class="size-title">Размер</div>
+                        <div class="catalog__inner-option__size">
+                            <div class="size-block" data-size="35">
+                                35
+                            </div>
+                            <div class="size-block" data-size="36">
+                                36
+                            </div>
+                            <div class="size-block" data-size="37">
+                                37
+                            </div>
+                            <div class="size-block" data-size="38">
+                                38
+                            </div>
+                            <div class="size-block" data-size="39">
+                                39
+                            </div>
+                            <div class="size-block" data-size="40">
+                                40
+                            </div>
+                            <div class="size-block" data-size="41">
+                                41
+                            </div>
+                            <div class="size-block" data-size="42">
+                                42
+                            </div>
+                            <div class="size-block" data-size="43">
+                                43
+                            </div>
+                        </div>
+                        <button class="catalog__inner-option__btn">Применить</button>
+                        <button type="reset" form="catalog__form" class="catalog__inner-option__btn-clear">сбросить</button>
+                </div>
+                <div class="modal-ikons ">
+                    <div class="modal__inkons-inner">
+                        <div class="modal-inner">
+                            <div class="modal-top">
+                                <img src="img/catalog/image.jpg" alt="" class="modal-img">
+                                <div class="modal-text">
+                                    <div class="modal-text-info">
+                                        <span class="info-text">Артикул</span>
+                                        <span class="info-text">В наличии:</span>
+                                    </div>
+                                    <div class="modal-text__inner">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-bot">
+                                <div class="modal-bot__inner">
+                                    <div class="modal-bot__inner-title">Описание</div>
+                                    <div class="modal-bot__inner-subtitle">Кроссовки Nike Blazer Mid '77 Vintage Suede с
+                                        винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого,
+                                        создавая
+                                        впечатление, что они хранились в шкафу долгие годы. </div>
+                                </div>
+                                <div class="modal-bot__inner">
+                                    <div class="modal-bot__inner-title">Характеристики</div>
+                                    <span class="modal-bot__inner-text">Пол: Мужской</span>
+                                    <span class="modal-bot__inner-text">Цвета: Разноцветный</span>
+                                    <span class="modal-bot__inner-text">Состав: Кожа, текстиль, резина</span>
+                                    <span class="modal-bot__inner-text">Страна: Вьетнам</span>
+                                </div>
+                            </div>
+                            <div class="modal__ikons-close">X</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__inner-shop">
+                    <div class="shop-cart" data-cart data-cart-id="01" data-cart-size="35">
+                        <img src="img/catalog/image.jpg" alt="" class="cart-img">
+                        <span class="cart-title">Кроссовки Nike Air Force 1 '07 QS</span>
+                        <span class="cart-price">11000 ₽ </span>
+
+                    </div>
+                    <div class="shop-cart" data-cart data-cart-id="02" data-cart-size="36">
+                        <img src="img/catalog/image.jpg" alt="" class="cart-img">
+                        <span class="cart-title">Кроссовки Nike Air </span>
+                        <span class="cart-price">25000 ₽</span>
+                    </div>
+                    <div class="shop-cart" data-cart data-cart-id="03" data-cart-size="37">
+                        <img src="img/catalog/image.jpg" alt="" class="cart-img">
+                        <span class="cart-title">Кроссовки Adidas</span>
+                        <span class="cart-price">40000 ₽ </span>
+                    </div>
+                    <div class="shop-cart" data-cart data-cart-id="04" data-cart-size="38">
+                        <img src="img/catalog/image.jpg" alt="" class="cart-img">
+                        <span class="cart-title">Кроссовки Abibas</span>
+                        <span class="cart-price">30000 ₽ </span>
+                    </div>
+                    <div class="shop-cart" data-cart data-cart-id="05" data-cart-size="39">
+                        <img src="img/catalog/image.jpg" alt="" class="cart-img">
+                        <span class="cart-title">Кроссовки Puma</span>
+                        <span class="cart-price">5000 ₽ </span>
+                    </div>
+                    <div class="shop-cart" data-cart data-cart-id="06" data-cart-size="40">
+                        <img src="img/catalog/image.jpg" alt="" class="cart-img">
+                        <span class="cart-title">Кроссовки DC</span>
+                        <span class="cart-price">20000 ₽ </span>
+                    </div>
+                    <div class="shop-cart" data-cart data-cart-id="07" data-cart-size="41">
+                        <img src="img/catalog/image.jpg" alt="" class="cart-img">
+                        <span class="cart-title">Кроссовки Vans</span>
+                        <span class="cart-price">8000 ₽ </span>
+                    </div>
+                    <div class="shop-cart" data-cart data-cart-id="08" data-cart-size="42">
+                        <img src="img/catalog/image.jpg" alt="" class="cart-img">
+                        <span class="cart-title">Кроссовки Converse</span>
+                        <span class="cart-price">9000 ₽ </span>
+                    </div>
+                    <div class="shop-cart" data-cart data-cart-id="09" data-cart-size="43">
+                        <img src="img/catalog/image.jpg" alt="" class="cart-img">
+                        <span class="cart-title">Кроссовки Reebok</span>
+                        <span class="cart-price">10000 ₽ </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- info -->
+
+
+    <div class="info">
+        <div class="container">
+            <div class="info__inner">
+                <div class="info__inner-items">
+                    <div class="info__inner-title">Пара слов о нас</div>
+                    <div class="info__inner-subtitle">Спорт держит нас в форме. Учит дисциплине. Объединяет нас.
+                        Через
+                        спорт
+                        мы можем менять жизни. В том числе с помощью воодушевляющих историй спортсменов. Чтобы
+                        помочь
+                        тебе
+                        подняться и двигаться вперед. </div>
+                    <div class="info__inner-name">
+                        <img src="img/info/line.png" alt="" class="info__inner-name__inner">
+                        <div class="info__inner-name__inner-title">SneakMax</div>
+                    </div>
+                </div>
+                <img src="img/info/nigg.jpg" alt="" class="info__inner-img">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- select -->
+    <div class="select">
+        <div class="container">
+            <div class="select__inner">
+                <div class="select__inner-title">Мы подберем идеальную пару для вас</div>
+                <div class="select__inner-subtitle">Ответьте на три вопроса и мы вышлем каталог с самыми подходящими
+                    для
+                    вас моделями </div>
+                <div class="select__inner-box">
+                    <div class="select__inner-box__title">Какой тип кроссовок рассматриваете?</div>
+                    <div class="select__inner-box__cart">
+                        <div class="select-cart__inner">
+                            <img src="img/select/croos.jpg" alt="" class="cart">
+                            <form action="" class="select-cart-form">
+                                <label for="">
+                                    <input class="select-input" type="checkbox">
+                                    кеды
+                                </label>
+                            </form>
+                        </div>
+                        <div class="select-cart__inner">
+                            <img src="img/select/croos.jpg" alt="" class="cart">
+                            <form action="" class="select-cart-form">
+                                <label for="">
+                                    <input class="select-input" type="checkbox">
+                                    кеды
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="select-cart__inner">
+                            <img src="img/select/croos.jpg" alt="" class="cart">
+                            <form action="" class="select-cart-form">
+                                <label for="">
+                                    <input class="select-input" type="checkbox">
+                                    кеды
+                                </label>
+                            </form>
+                        </div>
+                        <div class="select-cart__inner">
+                            <img src="img/select/croos.jpg" alt="" class="cart">
+                            <form action="" class="select-cart-form">
+                                <label for="">
+                                    <input class="select-input" type="checkbox">
+                                    кеды
+                                </label>
+                            </form>
+                        </div>
+                        <div class="select-cart__inner">
+                            <img src="img/select/croos.jpg" alt="" class="cart">
+                            <form action="" class="select-cart-form">
+                                <label for="">
+                                    <input class="select-input" type="checkbox">
+                                    кеды
+                                </label>
+                            </form>
+                        </div>
+                        <div class="select-cart__inner">
+                            <img src="img/select/croos.jpg" alt="" class="cart">
+                            <form action="" class="select-cart-form">
+                                <label for="">
+                                    <input class="select-input" type="checkbox">
+                                    кеды
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- team -->
+
+    <div class="team">
+        <div class="container">
+            <div class="team__title">Наша команда</div>
+            <div class="team__inner">
+                <div class="team__inner-cart">
+                    <img src="img/team/team-one.png" alt="" class="team__inner-cart__img">
+                    <div class="team__inner-cart__name">Максим Золотарев</div>
+                    <div class="team__inner-cart__subname">Администратор</div>
+                </div>
+                <div class="team__inner-cart">
+                    <img src="img/team/team-two.png" alt="" class="team__inner-cart__img">
+                    <div class="team__inner-cart__name">Максим Золотарев</div>
+                    <div class="team__inner-cart__subname">Администратор</div>
+                </div>
+                <div class="team__inner-cart">
+                    <img src="img/team/team-three.jpg" alt="" class="team__inner-cart__img">
+                    <div class="team__inner-cart__name">Максим Золотарев</div>
+                    <div class="team__inner-cart__subname">Администратор</div>
+                </div>
+                <div class="team__inner-cart">
+                    <img src="img/team/team-four.png" alt="" class="team__inner-cart__img">
+                    <div class="team__inner-cart__name">Максим Золотарев</div>
+                    <div class="team__inner-cart__subname">Администратор</div>
+                </div>
+                <div class="team__inner-cart">
+                    <img src="img/team/team-five.png" alt="" class="team__inner-cart__img">
+                    <div class="team__inner-cart__name">Максим Золотарев</div>
+                    <div class="team__inner-cart__subname">Администратор</div>
+                </div>
+                <div class="team__inner-cart">
+                    <img src="img/team/team-six.png" alt="" class="team__inner-cart__img">
+                    <div class="team__inner-cart__name">Максим Золотарев</div>
+                    <div class="team__inner-cart__subname">Администратор</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- questions -->
+    <div class="questions">
+        <div class="container">
+            <div class="questions__inner">
+                <div class="questions__title">Часто задаваемые вопросы</div>
+                <div class="questions__inner__side">
+                    <div class="questions__inner__side-title">
+                        <div class="side-title">Вопрос 1</div>
+                        <img data-question="question1" src="img/qusteion/plus.png" alt="" class="side-img">
+                    </div>
+                    <div class="qustions__inner__side-subtitle" id="question1">
+                        <span> А это ответ 1: в комплексе функционируют 6 детских садов с площадками, воспитателями
+                            и
+                            всякими
+                            другими людьми</span>
+                    </div>
+                </div>
+                <div class="questions__inner__side">
+                    <div class="questions__inner__side-title">
+                        <div class="side-title">Вопрос 2</div>
+                        <img data-question="question2" src="img/qusteion/plus.png" alt="" class="side-img">
+                    </div>
+                    <div class="qustions__inner__side-subtitle" id="question2">
+                        <span> А это ответ 2: в комплексе функционируют 6 детских садов с площадками, воспитателями
+                            и
+                            всякими
+                            другими людьми </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- contact -->
+    <div class="contact">
+        <div class="container">
+            <div class="contact__inner">
+                <div class="contact__inner-info">
+                    <div class="contact-title">Контакты</div>
+                    <div class="contact-tooltip">
+                        <span class="contact-info">Главный офис</span>
+                        <img src="img/contact/tooltip.svg"
+                            data-tooltip="Адрес и телефон для корреспонденции, инвесторов. Вопросы о доставке, качестве обслуживания и товара просьба задавать в отдел продаж"
+                            alt="" class="contact-tooltip-img">
+                    </div>
+                    <span class="contact-phone">+7 800 789 89 89</span>
+                    <span class="contact-adres">г. Санкт-Петербург, Комсомольская, 43 к1</span>
+                    <span class="contact-info">отдел продаж</span>
+                    <span class="contact-phone">+7 800 789 89 89</span>
+                    <span class="contact-adres">г. Санкт-Петербург, Комсомольская, 43 к1</span>
+                    <div class="contact__inner-info__img">
+                        <img src="img/contact/VK.svg" alt="" class="info__img">
+                        <img src="img/contact/Instagram.svg" alt="" class="info__img">
+                    </div>
+                </div>
+                <div class="contact__inner-map">
+                    <div id="map"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- inst -->
+    <div class="inst">
+        <div class="container">
+            <div class="inst__inner">
+                <div class="inst__inner-qusteion">
+                    <div class="inst__inner-qusteion-title">Есть вопросы?</div>
+                    <div class="inst__inner-qusteion-subtitle">Заполните форму и наш <p>менеджер свяжется с вами</p>
+                    </div>
+                    <div>
+                        <form class="inst-form" action="#">
+                            <input type="text" placeholder="Ваше имя">
+                            <input type="tel" placeholder="Ваш номер телефона">
+                            <button class="form-btn">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="inst__inner-inst">
+                    <div class="inst__inner-img">
+                        <img src="img/inst/inst.png" alt="">
+                    </div>
+                    <div class="inst__inner-photo">
+                        <div class="photo1"> <img src="img/inst/photo1.jpg" alt=""> </div>
+                        <div class="photo2"> <img src="img/inst/photo2.jpg" alt=""> </div>
+                        <div class="photo3"> <img src="img/inst/photo3.jpg" alt=""> </div>
+                        <div class="photo4"> <img src="img/inst/photo4.jpg" alt=""> </div>
+                        <div class="photo5"> <img src="img/inst/photo5.jpg" alt=""> </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <nav class="footer__inner-nav">
+                    <a href="#" class="footer-nav">Каталог</a>
+                    <a href="#" class="footer-nav">О нас</a>
+                    <a href="#" class="footer-nav">Подбор товара</a>
+                    <a href="#" class="footer-nav">Наша команда</a>
+                    <a href="#" class="footer-nav">Доставка и оплата</a>
+                    <a href="#" class="footer-nav">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/input.js"></script>
+<script src="js/map.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/open.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/select.js"></script>
+
+
+
+
+
+
+</html>
